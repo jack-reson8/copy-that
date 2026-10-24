@@ -30,3 +30,11 @@
 - skill-skill 1.2.0（d1e1d98）：publishing.md 加"评审驳回/合并"表和"曝光打法"，新增 scripts/json_append.py，删掉 PR 里写 AI 署名的建议；buildwithclaude#539 已重新钉版本。
 - 新 skill（接力/额度）写完：~/code/baton（本地 git，未建远程），7 个脚本用本会话真实记录测过。名字待 Jack 选：https://claude.ai/code/artifact/5a5eea84-ea19-4e4a-b286-c0a16dc2b73a （推荐 Over & Out）。选定后：改目录和 name、补 README 中英、manifest、加进 copy-that marketplace，推送前问 Jack。
 - 发布片参考已回：refs/technique-sheets.md + refs/picks/ 6 张；下一步按 6 个手法用真实素材重做风格帧。
+
+## 早上给 Jack
+- [ ] 新 skill 定名（推荐 Over & Out）：https://claude.ai/code/artifact/5a5eea84-ea19-4e4a-b286-c0a16dc2b73a
+- [ ] 发布片风格帧四选一（推荐 B 一个词铺满）：https://claude.ai/code/artifact/31362578-831f-4d13-9402-66a161bcd4e5 ；源文件 ~/code/.work/copy-that-film/frames2/
+- [ ] glama.ai 登记 toolkb-mcp（punkpeye PR 要求）
+- [ ] 内置浏览器登录 GitHub，好上传社交预览图
+- [ ] 发 r/ClaudeAI 的 899 体检帖（稿在 ~/code/.work/launch/）
+- [ ] 音乐插件会话：和声钢琴第一版已能实时弹，等你试听定音色和名字
