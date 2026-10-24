@@ -32,6 +32,8 @@ codex plugin add pro-motion@copy-that
 | <a href="https://github.com/jack-reson8/skill-skill"><img src="https://raw.githubusercontent.com/jack-reson8/skill-skill/main/docs/share.png" width="320"></a> | **[skill-skill](https://github.com/jack-reson8/skill-skill)** | Write, audit and publish skills that actually change what gets generated. |
 | <a href="https://github.com/jack-reson8/toolkb-mcp"><img src="https://raw.githubusercontent.com/jack-reson8/toolkb-mcp/main/docs/share.png" width="320"></a> | **[toolkb-mcp](https://github.com/jack-reson8/toolkb-mcp)** | An MCP server: any link to clean Markdown, local and free. Install from its repo. |
 
+**Check your own skill:** paste a GitHub link into the [skill health checker](https://jack-reson8.github.io/skill-skill/check/) and get a 0–100 score and a README badge. Runs in your browser, nothing uploaded.
+
 ## Why "Copy That"
 
 Copy is the writing in an ad. "Copy that" is what you say when you got the brief and you're on it. And copy is what you do to start using these. All three are true here.

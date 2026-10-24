@@ -32,6 +32,8 @@ codex plugin add pro-motion@copy-that
 | <a href="https://github.com/jack-reson8/skill-skill"><img src="https://raw.githubusercontent.com/jack-reson8/skill-skill/main/docs/share.png" width="320"></a> | **[skill-skill](https://github.com/jack-reson8/skill-skill)** | 写、体检、发布真正能改变产出的 skill。 |
 | <a href="https://github.com/jack-reson8/toolkb-mcp"><img src="https://raw.githubusercontent.com/jack-reson8/toolkb-mcp/main/docs/share.png" width="320"></a> | **[toolkb-mcp](https://github.com/jack-reson8/toolkb-mcp)** | MCP 服务：任何链接转成干净的 Markdown，本地运行、免费。从它的仓库安装。 |
 
+**顺手体检你自己的 skill：** 把 GitHub 链接贴进 [skill 体检页](https://jack-reson8.github.io/skill-skill/check/)，出 0–100 分和一个 README 徽章。在浏览器里跑，不上传任何东西。
+
 ## 为什么叫 Copy That
 
 copy 是广告文案；"Copy that" 是接到 brief 后那句"收到，马上办"；copy 也是复制，装上就能用。三层意思都成立。
