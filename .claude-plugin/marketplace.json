@@ -1,0 +1,54 @@
+{
+  "name": "copy-that",
+  "description": "Copy That: taste-first skills for people who make and ship things. Launch films, launch plans, Chinese copy, share images, and skills that actually work.",
+  "owner": {
+    "name": "jack-reson8"
+  },
+  "plugins": [
+    {
+      "name": "pro-motion",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jack-reson8/pro-motion.git",
+        "path": "plugins/pro-motion"
+      },
+      "description": "Audio-first MG films in code (canvas → MP4): pick an unconventional campaign mechanism (12 stunt levers), plan the music as a marketing asset (sonic logo, hooks, Suno/Udio prompts, post-production), then beat analysis, reference contact sheets, style frames, protagonist shot maps, motion library with 40+ AE / Blender-style effects, parallel rendering, multi-language cuts."
+    },
+    {
+      "name": "pro-launch",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jack-reson8/pro-launch.git",
+        "path": "plugins/pro-launch"
+      },
+      "description": "Product lifecycle skill: positioning, naming and domains, reference hunting, style bible and style frames, feature map, UI build loop, asset generation, device QA, launch video, GTM, growth and open-source/App Store shipping."
+    },
+    {
+      "name": "renhua",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jack-reson8/renhua.git",
+        "path": "plugins/renhua"
+      },
+      "description": "Chinese writing in a real person's voice: strips AI tells (emoji lists, slogans, 不是而是), fluent full sentences, theme line, results first, data-backed insight and one earned 金句; viral Xiaohongshu title library and optional humor patterns."
+    },
+    {
+      "name": "post",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jack-reson8/post-skill.git",
+        "path": "plugins/post"
+      },
+      "description": "Share-image sets for Xiaohongshu and X: App Store poster layout, real screenshots, faithful app-UI mocks, charts that aren't tables, a series/IP layer for go-to-market, fluent copy."
+    },
+    {
+      "name": "skill-skill",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/jack-reson8/skill-skill.git",
+        "path": "plugins/skill-skill"
+      },
+      "description": "Distil real work into skills with forcing functions (artifacts, gates, scripts), triggerable descriptions, a spec-based audit with health score and badge, and one-command reports for public skill repos."
+    }
+  ]
+}
