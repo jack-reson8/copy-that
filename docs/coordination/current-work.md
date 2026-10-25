@@ -44,3 +44,6 @@
 - copy-that README 中英文加体检网页入口。
 - 隔离环境验证一行命令装全套：5 个插件都装上，版本是最新（pro-motion 1.2.1、skill-skill 1.2.0）。本机 5 个 skill 都是仓库软链，无漂移。
 - 音乐插件会话上下文 55 万已停，交接在 ~/code/harmony-piano/docs/coordination/current-work.md；新会话是否已开未确认。
+- 新 skill（~/code/baton）补齐中英 README、Claude/Codex 清单、LICENSE 等；体检 100、publish_check READY、本地装通。只差定名和建远程（推送前问 Jack）。
+- skill-skill 1.3.0（adec7a8）：新增 mine_corrections.py，按"在多少个会话里反复出现"给用户的纠正排序。跑近 10 天：第一名是"没好好找参考"（21 个会话），其次"不是我要的"（15）、"丑/廉价"（14）。参考这条 pro-motion/pro-launch 都写了却还在反复，说明还只是建议，下一步要改成硬门槛（没有参考联系表就不许出风格帧）。
+- buildwithclaude#539 今晚已重钉过一次，1.3.0 先不再钉，攒到下批一起，免得刷维护者。
