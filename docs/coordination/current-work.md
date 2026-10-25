@@ -52,3 +52,4 @@
 - 夜间能做的已做完，剩下的主线都卡在 Jack 拍板：新 skill 名字、发布片风格方向。没有新的可做项就不再空转。
 
 - pro-motion 2224280：风格帧至少融合 2 个参考，配色和核心点子必须自己的（Jack："b 直接变成抄了"）。
+- 发布片 v1 出了：~/code/.work/copy-that-film/out/copy-that-onair-v1.mp4（竖版 16.76 s，音乐是 Jack 选的第 4 版）。分镜 film/shotmap.md，代码 film/film.html。喊声 3.24/3.48/3.80 逐音节砸出 COPY/THAT. 字标，3.96 乐队进；最终高潮 14.38 全部字行收进字标，15.96 roger beep 红灯闪两下收尾。等 Jack 看，之后出 16:9 和 1:1。
