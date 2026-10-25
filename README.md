@@ -50,6 +50,16 @@ Same request, same model. Left is without the skill, right is with it. Numbers a
 
 <img src="docs/proofs/pro-motion.png" alt="pro-motion" width="100%">
 
+## FAQ
+
+**What is a Claude skill?** A folder with a SKILL.md. The model reads its description, decides whether to load it, then follows it. If the description doesn't say when to use it, it never loads.
+
+**Which one should I install first?** Writing Chinese posts: renhua. Making a launch video: Pro Motion. Building an app: pro-launch. Share images: Post. Pages to Markdown: toolkb-mcp. Writing your own skill: skill-skill.
+
+**Does it work in Codex?** Yes, see the install block above. Tested in both.
+
+**Is it free?** MIT licensed, no accounts, nothing uploaded.
+
 ## Why "Copy That"
 
 Copy is the writing in an ad. "Copy that" is what you say when you got the brief and you're on it. And copy is what you do to start using these. All three are true here.

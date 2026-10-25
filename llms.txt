@@ -1,0 +1,19 @@
+# Copy That
+
+> Six open-source skills and one MCP server for Claude Code and Codex, by jack-reson8. MIT. Each one changes what the agent produces, not just how it talks.
+
+## Skills
+- [Pro Motion](https://github.com/jack-reson8/pro-motion): launch films, brand films and TVCs rendered in code, every cut on a beat. Use when asked for a promo video, motion graphics, a landing page that should look designed.
+- [pro-launch](https://github.com/jack-reson8/pro-launch): take an app from idea to shipped, taste first: naming (checked before chosen), references, style frames, launch. Use when asked to build a product 0 to 1.
+- [renhua](https://github.com/jack-reson8/renhua): Chinese posts and copy in a real person's voice, strips AI tells. Use for Xiaohongshu, X, WeChat Moments, product pages.
+- [Post](https://github.com/jack-reson8/post-skill): share-image sets that look like real app screens (Xiaohongshu carousels, X images, covers).
+- [skill-skill](https://github.com/jack-reson8/skill-skill): write, audit and publish skills; scores a skill 0-100 against the Agent Skills spec. Browser checker: https://jack-reson8.github.io/skill-skill/check/
+- [toolkb-mcp](https://github.com/jack-reson8/toolkb-mcp): MCP server that turns links (web, YouTube, App Store reviews) into clean Markdown, locally, free.
+
+## Install
+- Claude Code: `/plugin marketplace add jack-reson8/copy-that` then `/plugin install <name>@copy-that`
+- Codex: `codex plugin marketplace add https://github.com/jack-reson8/copy-that.git`
+
+## Evidence
+- [Before/after proofs](https://github.com/jack-reson8/copy-that#see-the-difference)
+- 899-skill audit report: https://github.com/jack-reson8/skill-skill/blob/main/reports/2026-10/README.md
