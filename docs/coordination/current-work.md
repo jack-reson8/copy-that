@@ -53,3 +53,13 @@
 
 - pro-motion 2224280：风格帧至少融合 2 个参考，配色和核心点子必须自己的（Jack："b 直接变成抄了"）。
 - 发布片 v1 出了：~/code/.work/copy-that-film/out/copy-that-onair-v1.mp4（竖版 16.76 s，音乐是 Jack 选的第 4 版）。分镜 film/shotmap.md，代码 film/film.html。喊声 3.24/3.48/3.80 逐音节砸出 COPY/THAT. 字标，3.96 乐队进；最终高潮 14.38 全部字行收进字标，15.96 roger beep 红灯闪两下收尾。等 Jack 看，之后出 16:9 和 1:1。
+
+## 2026-10-25 PR 邮件治理（side session）
+- 现状：没有 watch 任何仓库（/user/subscriptions 为空），邮件全来自"自己是作者/被@/参与"的线程，共 82 个线程（PR 25、CI 54、其它 3）。已把通知全部标为已读。
+- 卡点：gh 的 token 缺 `notifications` scope，PUT /notifications/threads/{id}/subscription 返回 200 但没生效（ignored 仍 false）。需 Jack 跑一次 `gh auth refresh -h github.com -s notifications`（浏览器授权），之后我批量设 ignored。
+- 账号级开关只能 Jack 在 github.com/settings/notifications 改（清单见会话回复）。
+- 巡检：`~/code/.work/growth/pr_watch.py`（调用 pr_triage，对比 pr-snapshot.json，只报变化，刷新 pr-status.md）；已并进定时任务 copy-that-daily-growth 的第 3 步。
+- 固定入口：`docs/coordination/pr-status.md`（每日刷新）+ 每天 9:30 短报。
+- Gmail 过滤规则：只给了方案，未创建，等 Jack 确认。
+- 发布片 v1 被否（节奏没卡细、素材丑、不流畅、没叙事，只有 COPY THAT 主视觉好）。v2：~/code/.work/copy-that-film/out/copy-that-onair-v2.mp4，代码 film/film2.html，分镜 film/shotmap-v2.md，音乐按频段拆的事件在 music/events.json。素材换成 tutti.pics 首页实拍截图和 v2 分享图。
+- PR 邮件减负和自动巡检交给分会话 pr-watch（local_6ba63e34）。
