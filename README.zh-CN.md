@@ -44,15 +44,15 @@ MIT 协议。作者 [jack-reson8](https://github.com/jack-reson8)。
 
 同一个需求，同一个模型。左边没装，右边装了。数字是实测，输出是真实跑出来的（节选）。
 
-<img src="docs/proofs/renhua.png" alt="renhua" width="100%">
+<img src="docs/proofs/renhua.zh.png" alt="renhua" width="100%">
 
-<img src="docs/proofs/skill-skill.png" alt="skill-skill" width="100%">
+<img src="docs/proofs/skill-skill.zh.png" alt="skill-skill" width="100%">
 
-<img src="docs/proofs/toolkb-mcp.png" alt="toolkb-mcp" width="100%">
+<img src="docs/proofs/toolkb-mcp.zh.png" alt="toolkb-mcp" width="100%">
 
-<img src="docs/proofs/pro-launch.png" alt="pro-launch" width="100%">
+<img src="docs/proofs/pro-launch.zh.png" alt="pro-launch" width="100%">
 
-<img src="docs/proofs/post.png" alt="post" width="100%">
+<img src="docs/proofs/post.zh.png" alt="post" width="100%">
 
-<img src="docs/proofs/pro-motion.png" alt="pro-motion" width="100%">
+<img src="docs/proofs/pro-motion.zh.png" alt="pro-motion" width="100%">
 
