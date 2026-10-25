@@ -33,7 +33,7 @@
 
 ## 早上给 Jack
 - [ ] 新 skill 定名（推荐 Over & Out）：https://claude.ai/code/artifact/5a5eea84-ea19-4e4a-b286-c0a16dc2b73a
-- [ ] 发布片风格帧四选一（推荐 B 一个词铺满）：https://claude.ai/code/artifact/31362578-831f-4d13-9402-66a161bcd4e5 ；源文件 ~/code/.work/copy-that-film/frames2/
+- [x] 发布片风格：Jack 选 B+C 融合、要求不照搬。已出 On Air 融合版 https://claude.ai/code/artifact/5980a206-f10d-43fc-a04b-96f83eae235e （源 ~/code/.work/copy-that-film/frames3/），等 Jack 看；旧四选一：https://claude.ai/code/artifact/31362578-831f-4d13-9402-66a161bcd4e5 ；源文件 ~/code/.work/copy-that-film/frames2/
 - [ ] glama.ai 登记 toolkb-mcp（punkpeye PR 要求）
 - [ ] 内置浏览器登录 GitHub，好上传社交预览图
 - [ ] 发 r/ClaudeAI 的 899 体检帖（稿在 ~/code/.work/launch/）
@@ -50,3 +50,5 @@
 - pro-motion 1.3.0（5d50045）：新增 refs_gate.py 硬门槛，refs/ 里不到 6 张参考联系表、6 条手法拆解就不许出风格帧；风格帧必须和参考并排写差距。对应"没好好找参考"这条最常见的纠正。copy-that 发布片项目已过门槛（26 张联系表、14 条）。buildwithclaude#538 下批再重钉。
 - pro-launch 不用另加参考门槛：phase_gate.py frames 已经要求技法表和 -vs-ref 对比图；而且仓库里有另一个会话未提交的改动（06c-web-craft、phase_gate web），没动它，等那个会话自己提交。
 - 夜间能做的已做完，剩下的主线都卡在 Jack 拍板：新 skill 名字、发布片风格方向。没有新的可做项就不再空转。
+
+- pro-motion 2224280：风格帧至少融合 2 个参考，配色和核心点子必须自己的（Jack："b 直接变成抄了"）。
