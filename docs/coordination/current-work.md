@@ -84,3 +84,5 @@
 - 6 个 skill 的静态体检均 100/100，PR 反馈无可修项，所以“优化”主要落在呈现和推广；内容层要等发布后真实反馈再改。
 - 发布全套：~/code/.work/launch/PLAYBOOK.md。
 - 事故：清理卡住的 headless Chrome 时误用 pkill "Google Chrome"，可能关掉了 Jack 的 Chrome 窗口（可 Cmd+Shift+T 恢复标签）。
+- GEO：copy-that 加了 llms.txt 和 FAQ（已推送）。
+- 发布片 v3：out/copy-that-onair-v3.mp4（film/film3.html）。同一条链做四遍、越来越快：brief 卡 → COPY THAT. 盖章 → 从章里裂开出真实成品（tutti.pics、组图、人话前后、体检）；铜管段每下一个"你要的东西"+盖章；结尾字标 + "说一句，它就去做。"。pro-motion 58c8140 合并了音频分析方法（music_events.py + audio-reference-analyzer）。
