@@ -63,3 +63,9 @@
 - Gmail 过滤规则：只给了方案，未创建，等 Jack 确认。
 - 发布片 v1 被否（节奏没卡细、素材丑、不流畅、没叙事，只有 COPY THAT 主视觉好）。v2：~/code/.work/copy-that-film/out/copy-that-onair-v2.mp4，代码 film/film2.html，分镜 film/shotmap-v2.md，音乐按频段拆的事件在 music/events.json。素材换成 tutti.pics 首页实拍截图和 v2 分享图。
 - PR 邮件减负和自动巡检交给分会话 pr-watch（local_6ba63e34）。
+- 定时任务手动跑过一次（session local_b1980734…）：短报 = 「今天总星数 0、7 天真人浏览 15 … PR 无变化（YOU 1 · ACTION 0 · WAIT 34 · 已合并 21 · 已关闭 3）… 需 Jack：glama.ai 登记 toolkb-mcp」。
+
+## 下一步（2026-10-25，Jack 对 v2 的反馈，压缩/换班后从这里接）
+1. 发布片 v2："变好了但不够好，有点看不懂是在做啥了，而且不利于 branding"。下一版要：一眼看懂"一句话 → 收到 → 成品"这条线；品牌（COPY THAT 字标、On Air 红、tally 红灯、摩斯/roger beep）要更集中、反复出现；少放杂成品，每个镜头讲清在做什么。代码 film/film2.html，事件 music/events.json。
+2. 音频解析：Codex 用 FFmpeg + librosa + CLAP 解析了四首（报告 /Users/jack/Documents/Codex/2026-10-25/https-suno-com-s-tsqyrhdqyjfzlpiy-https/outputs/四首音频解析.md，skill 在同目录 audio-reference-analyzer/SKILL.md，已装进共用 skill 目录）。Jack 要：把它的方法有选择地整合进 pro-motion 的音频部分（audio-first.md / analyze_music.py），我这边更好的做法（按频段拆起音、1 kHz 提示音识别、段落新颖度）也合进去，或反过来帮它优化。注意它用的是 Suno 公开视频音轨，不是解密音频。
+3. PR 巡检：pr-watch 会话等 Jack 跑 `gh auth refresh -h github.com -s notifications`。
