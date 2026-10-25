@@ -34,6 +34,22 @@ codex plugin add pro-motion@copy-that
 
 **Check your own skill:** paste a GitHub link into the [skill health checker](https://jack-reson8.github.io/skill-skill/check/) and get a 0–100 score and a README badge. Runs in your browser, nothing uploaded.
 
+## See the difference
+
+Same request, same model. Left is without the skill, right is with it. Numbers are measured, outputs are real runs (excerpts).
+
+<img src="docs/proofs/renhua.png" alt="renhua" width="100%">
+
+<img src="docs/proofs/skill-skill.png" alt="skill-skill" width="100%">
+
+<img src="docs/proofs/toolkb-mcp.png" alt="toolkb-mcp" width="100%">
+
+<img src="docs/proofs/pro-launch.png" alt="pro-launch" width="100%">
+
+<img src="docs/proofs/post.png" alt="post" width="100%">
+
+<img src="docs/proofs/pro-motion.png" alt="pro-motion" width="100%">
+
 ## Why "Copy That"
 
 Copy is the writing in an ad. "Copy that" is what you say when you got the brief and you're on it. And copy is what you do to start using these. All three are true here.
