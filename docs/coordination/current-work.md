@@ -47,3 +47,4 @@
 - 新 skill（~/code/baton）补齐中英 README、Claude/Codex 清单、LICENSE 等；体检 100、publish_check READY、本地装通。只差定名和建远程（推送前问 Jack）。
 - skill-skill 1.3.0（adec7a8）：新增 mine_corrections.py，按"在多少个会话里反复出现"给用户的纠正排序。跑近 10 天：第一名是"没好好找参考"（21 个会话），其次"不是我要的"（15）、"丑/廉价"（14）。参考这条 pro-motion/pro-launch 都写了却还在反复，说明还只是建议，下一步要改成硬门槛（没有参考联系表就不许出风格帧）。
 - buildwithclaude#539 今晚已重钉过一次，1.3.0 先不再钉，攒到下批一起，免得刷维护者。
+- pro-motion 1.3.0（5d50045）：新增 refs_gate.py 硬门槛，refs/ 里不到 6 张参考联系表、6 条手法拆解就不许出风格帧；风格帧必须和参考并排写差距。对应"没好好找参考"这条最常见的纠正。copy-that 发布片项目已过门槛（26 张联系表、14 条）。buildwithclaude#538 下批再重钉。
