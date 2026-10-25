@@ -69,3 +69,18 @@
 1. 发布片 v2："变好了但不够好，有点看不懂是在做啥了，而且不利于 branding"。下一版要：一眼看懂"一句话 → 收到 → 成品"这条线；品牌（COPY THAT 字标、On Air 红、tally 红灯、摩斯/roger beep）要更集中、反复出现；少放杂成品，每个镜头讲清在做什么。代码 film/film2.html，事件 music/events.json。
 2. 音频解析：Codex 用 FFmpeg + librosa + CLAP 解析了四首（报告 /Users/jack/Documents/Codex/2026-10-25/https-suno-com-s-tsqyrhdqyjfzlpiy-https/outputs/四首音频解析.md，skill 在同目录 audio-reference-analyzer/SKILL.md，已装进共用 skill 目录）。Jack 要：把它的方法有选择地整合进 pro-motion 的音频部分（audio-first.md / analyze_music.py），我这边更好的做法（按频段拆起音、1 kHz 提示音识别、段落新颖度）也合进去，或反过来帮它优化。注意它用的是 Suno 公开视频音轨，不是解密音频。
 3. PR 巡检：pr-watch 会话等 Jack 跑 `gh auth refresh -h github.com -s notifications`。
+- 订阅治理结果：线程级 PUT subscription 对这些线程无效（返回 ignored:false），改用 GraphQL updateSubscription(UNSUBSCRIBED)：34 个 open PR 全部退订，其余 24 个已合并/关闭本就是 UNSUBSCRIBED。token 已有 notifications scope。
+
+## 2026-10-25 增长方向调整（Jack 授权"把优化做好"）
+- 停止新提收录 PR；改为：对比演示 → 集中发布。
+- 已做：renhua 装前/装后对比图 ~/code/.work/launch/renhua-ba/ba.png（真实子代理跑的，节选）；已放进 ~/code/renhua/docs/before-after.png 并在 README 首屏加了引用（未提交未推送）。
+- 已写：launch-posts.md 第二组（X/小红书/V2EX）+ 发布日安排。
+- 等 Jack：选发布日；确认推送 renhua README；glama.ai 登记 toolkb-mcp。
+
+## 2026-10-25 全套出图与推广（Jack："都参考 pro-motion 提升审美"）
+- 视觉规范：沿用 Jack 昨天满意的“果味”系列（~/code/.work/share-cards/make_v2.py：浅灰底、黑标题+强调色第二行、灰色 before 卡 + 白色 after 卡，6 个强调色）；第一版误用了 On Air 红色风格，已替换。生成脚本 ~/code/.work/launch/cards/build.py（puppeteer 出图）。
+- 6 个 skill 各一张横版（README 用，已提交到各仓库 docs/proof.png 并在 README 首屏下引用）+ 竖版（发帖，~/code/.work/launch/posts/）。copy-that README 中英都加了“一眼看差别”。**全部只做了本地 commit，未推送。**
+- 内容来源都是实测：renhua/pro-launch 为子代理真跑的前后对比（pro-launch 基线受全局 CLAUDE.md 影响，差别较小，措辞已克制）；skill-skill 为体检真实数字；toolkb-mcp 为维基词条实测字节；post/pro-motion 为真实产出帧。
+- 6 个 skill 的静态体检均 100/100，PR 反馈无可修项，所以“优化”主要落在呈现和推广；内容层要等发布后真实反馈再改。
+- 发布全套：~/code/.work/launch/PLAYBOOK.md。
+- 事故：清理卡住的 headless Chrome 时误用 pkill "Google Chrome"，可能关掉了 Jack 的 Chrome 窗口（可 Cmd+Shift+T 恢复标签）。
