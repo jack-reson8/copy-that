@@ -10,9 +10,9 @@ await client.connect(new StdioClientTransport({ command: process.execPath, args:
 const text = (r) => r.content[0].text;
 
 const tools = (await client.listTools()).tools.map((t) => t.name).sort();
-assert.deepEqual(tools, ["ai_tone_check", "audit_skill", "name_check", "skill_method"]);
+assert.deepEqual(tools, ["ai_tone_check", "audit_skill", "launch_plan", "name_check", "skill_method"]);
 const prompts = (await client.listPrompts()).prompts.map((p) => p.name).sort();
-assert.deepEqual(prompts, ["post", "pro-launch", "pro-motion", "renhua", "skill-skill"]);
+assert.deepEqual(prompts, ["launch", "post", "pro-launch", "pro-motion", "renhua", "skill-skill"]);
 assert.equal((await client.listResources()).resources.length, 5);
 
 const bad = text(await client.callTool({ name: "audit_skill", arguments: { target: path.join(here, "fixtures/loose-skill") } }));
@@ -31,5 +31,11 @@ assert.ok((await client.callTool({ name: "skill_method", arguments: { name: "nop
 const p = await client.getPrompt({ name: "post", arguments: { task: "launch carousel" } });
 assert.match(p.messages[0].content.text, /launch carousel/);
 
+const plan0 = text(await client.callTool({ name: "launch_plan", arguments: { product: "Tutti" } }));
+assert.match(plan0, /Campaign mechanism/); assert.match(plan0, /skill_method pro-motion ref audio-first.md/);
+const plan1 = text(await client.callTool({ name: "launch_plan", arguments: { project_dir: new URL("./fixtures/launch-proj", import.meta.url).pathname } }));
+assert.match(plan1, /Positioning.*✓/); assert.match(plan1, /Name, domains, trademark ← next/);
+assert.ok((await client.callTool({ name: "launch_plan", arguments: { project_dir: "/nope/x" } })).isError);
+assert.match((await client.getPrompt({ name: "launch", arguments: { product: "Tutti" } })).messages[0].content.text, /Work through this plan for Tutti/);
 await client.close();
-console.log("ok: 4 tools, 5 prompts, 5 resources, offline calls pass");
+console.log("ok: 5 tools, 6 prompts, 5 resources, offline calls pass");

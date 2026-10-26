@@ -1,6 +1,6 @@
 {
   "name": "copy-that-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Copy That as tools: audit a Claude skill, catch AI tone in Chinese or English copy, check names against domains and the App Store, and serve the Copy That methods (launch films, share posts, product launch, human copy) to any MCP client: Claude, Codex, Cursor, Gemini CLI.",
   "type": "module",
   "bin": {

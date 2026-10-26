@@ -6,8 +6,9 @@ import { audit } from "./audit.js";
 import { checkTone } from "./tone.js";
 import { checkNames } from "./names.js";
 import { listSkills, readSkill } from "./skills.js";
+import { launchPlan, STAGE_IDS } from "./launch.js";
 
-export const VERSION = "0.1.0";
+export const VERSION = "0.2.0";
 const ok = (text) => ({ content: [{ type: "text", text }] });
 const fail = (e) => ({ isError: true, content: [{ type: "text", text: "Error: " + (e && e.message ? e.message : String(e)) }] });
 
@@ -41,6 +42,15 @@ export async function serve() {
     if (!name) return ok(skills.map((s) => `- **${s.name}** — ${s.description}\n  ${s.repo}`).join("\n"));
     return ok(readSkill(name, ref));
   } catch (e) { return fail(e); } });
+
+  server.registerTool("launch_plan", {
+    title: "Launch plan (pro-launch + pro-motion)",
+    description: "One order of work from idea to launch that joins pro-launch (positioning, naming, references, style bible, feature map, UI) and pro-motion (campaign mechanism, music, shot map, launch film, official site), then copy, posting and shipping. Shared inputs flow between them: the aha moment picks the campaign, one reference set and style bible feed UI, film and site, every film claim maps to a real feature. Pass project_dir to see which stages already have real files and get the next step.",
+    inputSchema: { product: z.string().optional().describe("Product name or one-line idea"), project_dir: z.string().optional().describe("Project folder to check, e.g. ~/code/my-app"), from: z.enum(STAGE_IDS).optional().describe("Start the plan at this stage") },
+  }, async (a) => { try { return ok(launchPlan(a).markdown); } catch (e) { return fail(e); } });
+
+  server.registerPrompt("launch", { title: "Copy That · launch (pro-launch + pro-motion)", description: "Take a product from idea to launch: build it with pro-launch, launch it with pro-motion, one stage at a time with file gates.", argsSchema: { product: z.string().optional().describe("Product name or idea"), project_dir: z.string().optional().describe("Project folder") } },
+    ({ product, project_dir }) => ({ messages: [{ role: "user", content: { type: "text", text: `${launchPlan({ product, project_dir }).markdown}\n\n---\nWork through this plan for ${product || "my product (ask me what it is)"}${project_dir ? ` in ${project_dir}` : ""}. Start at the next stage: read the listed method references with skill_method, write that stage's files, then call launch_plan${project_dir ? " with this project_dir" : ""} to confirm before moving on. Ask me only about taste (show 2–4 previews), money, publishing or logins.` } }] }));
 
   for (const s of skills) {
     server.registerPrompt(s.name, { title: `Copy That · ${s.name}`, description: s.description, argsSchema: { task: z.string().optional().describe("What you want done") } },
