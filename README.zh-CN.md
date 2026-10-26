@@ -21,6 +21,12 @@ codex plugin marketplace add https://github.com/jack-reson8/copy-that.git
 codex plugin add pro-motion@copy-that
 ```
 
+**Cursor、Gemini CLI、Claude Desktop，或者一次全装**
+```bash
+npx copy-that-mcp setup
+```
+自动找到你电脑上的 AI 工具，先列出所有改动，你确认后才装。同时装上 Copy That 的 MCP 工具：skill 体检、AI 味检查、起名查重，以及给不支持 skill 的客户端用的整套方法。见 [mcp/](mcp/)。
+
 ## 全套
 
 | | Skill | 能做什么 |

@@ -1,0 +1,47 @@
+{
+  "name": "copy-that-mcp",
+  "version": "0.1.0",
+  "description": "Copy That as tools: audit a Claude skill, catch AI tone in Chinese or English copy, check names against domains and the App Store, and serve the Copy That methods (launch films, share posts, product launch, human copy) to any MCP client: Claude, Codex, Cursor, Gemini CLI.",
+  "type": "module",
+  "bin": {
+    "copy-that-mcp": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "agent-skills",
+    "skill-audit",
+    "ai-writing",
+    "domain-check"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jack-reson8/copy-that.git",
+    "directory": "mcp"
+  },
+  "homepage": "https://github.com/jack-reson8/copy-that/tree/main/mcp",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.25.76"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-skills.mjs",
+    "test": "node test/mcp-test.mjs"
+  }
+}
