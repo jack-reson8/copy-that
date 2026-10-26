@@ -1,9 +1,13 @@
 ---
 name: pro-motion
-description: "Pro Motion: make a high-taste motion-graphics launch film, brand film, TVC or promo video and the unconventional campaign around it, audio first: pick a surprising campaign mechanism, plan the music as a marketing asset, then render the film in code (canvas to MP4) cut to the beat with AE-style effects. Also builds stylized web pages the same way (official site, landing page, interactive hero: live WebGL type, cutout subjects, try-with-your-photo, waitlist). Also makes 小红书 / p5.js digital-art shorts. Use when the user asks for a launch video, product film, brand ad, app promo, motion graphics, stylized animation, viral or guerrilla marketing, a jingle or BGM, a video re-cut to music or localized, or a website / landing page / hero that should look designed. Triggers: p5js, 数字艺术, 艺术短片, 生成艺术, 官网, 落地页, 网页首屏, 网站动效, 发布视频, 宣传片, 品牌片, 广告创意, 营销点子, 非常规营销, 事件营销, 病毒传播, 吉祥物人设, 广告配乐, BGM, 开场动画, Suno 提示词, 动效视频, 转场, 特效; プロモーション動画, モーショングラフィックス; 홍보 영상, 모션그래픽; video quảng bá, motion graphics."
+description: "Pro Motion: make a high-taste motion-graphics launch film, brand film, TVC, promo or explainer / data video and the unconventional campaign around it, audio first: pick a surprising campaign mechanism, plan the music as a marketing asset, then render the film in code (canvas to MP4) cut to the beat with AE-style effects. Also builds stylized web pages the same way (official site, landing page, interactive WebGL hero, waitlist). Also makes 小红书 / p5.js digital-art shorts. Use when the user asks for a launch video, explainer or knowledge video, product film, brand ad, app promo, motion graphics, stylized animation, viral or guerrilla marketing, a jingle or BGM, a video re-cut to music or localized, or a website / landing page / hero that should look designed. Triggers: 讲解视频, 知识视频, 数据视频, 科普视频, p5js, 数字艺术, 艺术短片, 生成艺术, 官网, 落地页, 网页首屏, 网站动效, 发布视频, 宣传片, 品牌片, 广告创意, 营销点子, 非常规营销, 事件营销, 病毒传播, 吉祥物人设, 广告配乐, BGM, 开场动画, Suno 提示词, 动效视频, 转场, 特效; プロモーション動画, モーショングラフィックス; 홍보 영상, 모션그래픽; video quảng bá, motion graphics."
 ---
 
-# Pro Motion — MG film, audio first (launch · brand · TVC · promo)
+# Pro Motion — MG film, audio first (launch · brand · TVC · promo · explainer)
+
+**Explainer, knowledge, data and 科普 videos follow the same steps.** A voice-led explainer is not an exception: the voice + BGM mix is the track (step 2 runs on it), the data screens need real references and three style frames like any film, and every screen change goes in the shot map. On 2026-10-26 a data explainer (港乐 0243 EP.01) treated itself as "not a promo", skipped steps 2–5 and was rejected six rounds running.
+
+**Hard gate: `python3 <this skill's base directory>/scripts/film_gate.py <project>` must print ✓ before any film render** (refs_gate ✓, `shotmap.md` with a technique column, `music/events.json`, a side-by-side page of 3 style frames citing technique entries). The `promo-guard.py` hook blocks `render-fast.js` to .mp4 until it does; `--stills` is never blocked. "直接出成片" from the user means do the missing artifacts fast, not skip them. After a compaction, re-read this file before the next render instead of working from the summary.
 
 A method for making motion-graphics films that read as designed, not templated — in code, fast, locked to music.
 It was distilled from a real project that went through ~10 rounds: early cuts were rejected as "PPT", "ugly material", "text floating on top", "pop art when I asked for stylized"; later cuts were accepted. **The difference was the method, not the tooling.** Follow the steps in order; each one exists because skipping it failed once.
@@ -68,7 +72,7 @@ For each reference write a **technique sheet** entry (`### name` in `refs/techni
 
 ## 4 · Direction: three style frames before any film
 
-**Gate:** `python3 <this skill's base directory>/scripts/refs_gate.py .` must print ✓ (≥ 6 contact sheets in `refs/`, ≥ 6 technique entries with palette, transition and signature move) before any style frame is drawn. Each direction fuses **≥ 2 references** — copy only inside the technique sheet; the palette, the core idea and how real material is used must be your own (a direction that keeps one reference's palette and layout was rejected as "抄"). Show each frame beside its references with what was taken, how it was changed, and where it still falls short, in words, not a self-score.
+**Gate:** `python3 <this skill's base directory>/scripts/refs_gate.py .` must print ✓ (≥ 6 contact sheets in `refs/`, ≥ 6 technique entries with palette, transition and signature move) before any style frame is drawn. Each direction fuses **≥ 2 references** — copy only inside the technique sheet; the palette, the core idea and how real material is used must be your own (a direction that keeps one reference's palette and layout was rejected as "抄"). Show each frame beside its references with what was taken, how it was changed, and where it still falls short, in words, not a self-score. Put the three side by side in `stills/style-frames.html` (or `docs/style-frames.md`) and name under each frame the `### id`s of the technique entries it fuses; a frame whose only reference is "我补" doesn't count. When two rounds in a row are rejected, list what was accepted and deepen that instead of switching the whole style.
 
 Don't default to the first association or the style that is easiest to code — if a direction can be named by one familiar label ("pop art", "flat", "Y2K", "clean SaaS") it is probably not new enough.
 1. Propose **3 clearly different directions**, each = a style family + 2–3 *named techniques* from the technique sheets or `references/vfx-techniques.md` (AE / Blender / anime devices with sources, parameters and the `motion-lib.js` call) + the material it needs. Render `fx-demo.html` stills if the user needs to see the vocabulary first.
@@ -84,9 +88,9 @@ Don't default to the first association or the style that is easiest to code — 
 - **Changes follow the onsets**: build every scene's moves from `within(ON, a, b)` and wrap scenes in `beatCam(t, LOW, HIGH)` (both in `motion-lib.js`); print onsets per section beside the shot map — no section may change less often than its onsets.
 - **Text is animation**: written on by the protagonist, riding a path, echoing an effect, annotating what it names. No lower-third templates, chips or boxes. Few words.
 - **The ending grows out of the film**: everything converges into the protagonist, which becomes part of the logo.
-- Shot map table: time · music event · picture · transition in · words. Save it as `shotmap.md`.
+- Shot map table: time · music event · picture · transition in · words. Save it as `shotmap.md` with columns `time | music event | picture | technique | carries over | words` (film_gate reads the technique column).
 
-Run `references/aesthetic-checklist.md` against the shot map before coding.
+Run `references/aesthetic-checklist.md` against the shot map before coding (its "Set, light & finish" block applies to every film and web hero; the strongest transition is `vfx-techniques.md` §7 material morph).
 
 ## 6 · Build
 
@@ -99,6 +103,7 @@ Run `references/aesthetic-checklist.md` against the shot map before coding.
 ## 7 · Render fast, verify once, deliver
 
 ```bash
+python3 <this skill's base directory>/scripts/film_gate.py .                                            # must print ✓ first; the hook blocks the render otherwise
 node tools/render-fast.js "film.html?lang=en" out/film-en.mp4 --dur 20.04 --audio music/track.mp3 [--fps 24]   # parallel tabs; ~30 s per 20 s @60fps
 bash tools/contact_sheet.sh out/film-en.mp4 stills/check.jpg 0.5,1.0,2.4,...                               # frames at chosen seconds → one image
 $FF -i out/film-en.mp4 -map 0:a -f null - 2>&1 | grep -oE 'time=[0-9:.]+' | tail -1                       # audio must run full length
@@ -120,7 +125,7 @@ Take feedback as "time → problem", fix only that, re-render (seconds, not minu
 
 ## Files
 
-- `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `refs_gate.py`, `music_events.py`, `cutout.swift`, `faces.swift`, `web_layers.js` (decode a reference site's layers), `web_scroll.js` (scroll contact sheet + video of any page or prototype), `web_gate.py` (web order gate), `ship_check.py` (frames, LUFS, crest and music-over-SFX per section before delivery)
+- `scripts/` — `setup.sh`, `analyze_music.py`, `audio_post.py`, `render-fast.js`, `contact_sheet.sh`, `ref_frames.sh`, `refs_gate.py` (rejects 待核 / 未抽帧 / 凭记忆 entries and entries without a real sheet), `film_gate.py` (render gate: refs + shotmap + events.json + 3 style frames), `music_events.py`, `cutout.swift`, `faces.swift`, `web_layers.js` (decode a reference site's layers), `web_scroll.js` (scroll contact sheet + video of any page or prototype), `web_gate.py` (web order gate), `music_fit.py` (picture-first: best offset in a full track so hits land on the picture's key moments), `ship_check.py` (frames, LUFS, crest and music-over-SFX per section before delivery)
 - `assets/template/` — `campaign.md`, `audio-plan.md`, `film.html`, `film.js` (8-second runnable demo), `motion-lib.js`, `fx-demo.html` + `fx-demo.js` (one second per effect), OFL handwriting fonts
 - `assets/web-hero/` — the accepted tutti.pics engine: `src/index.html` + `src/strings.json` template, `public/hero.js` (WebGL type wall, looks, flash, code/poster/404 pages), `try.js` (local segmentation), `join.js` + `functions/` + `schema.sql` (waitlist on Pages + D1), `tools/build.js` (i18n pages + font subsets), `tools/og.js` (share cards)
 - `references/` — `creative-process.md` (how ideas are found: eight moves + tests), `brand-system.md` (coherent brand: core, tokens, touchpoint matrix, order), `web-craft.md` (web order, recipe, pitfalls), `digital-art-short.md` (小红书 art shorts: scene, symbol gate, look, sound, post kit), `unconventional-marketing.md`, `campaign-cases.md`, `audio-first.md`, `vfx-techniques.md`, `sourcing.md`, `research-notes.md`, `aesthetic-checklist.md`, `lessons.md`

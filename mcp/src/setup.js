@@ -8,7 +8,9 @@ import readline from "node:readline/promises";
 import { spawnSync } from "node:child_process";
 
 const HOME = os.homedir();
-const SERVER = { command: "npx", args: ["-y", "copy-that-mcp"] };
+// Installed from the GitHub release tarball, so nothing depends on an npm account.
+export const PKG = "https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz";
+const SERVER = { command: "npx", args: ["-y", PKG] };
 const PLUGINS = ["pro-motion", "pro-launch", "renhua", "post", "skill-skill"];
 const has = (cmd) => spawnSync(process.platform === "win32" ? "where" : "which", [cmd], { stdio: "ignore" }).status === 0;
 const desktopConfig = process.platform === "darwin" ? path.join(HOME, "Library/Application Support/Claude/claude_desktop_config.json")
@@ -45,7 +47,7 @@ export function plan() {
 
 export async function setup({ yes = false, dryRun = false } = {}) {
   const targets = plan();
-  if (!targets.length) { console.log("No supported agent found (Claude Code, Codex, Cursor, Gemini CLI, Claude Desktop).\nManual config: command \"npx\", args [\"-y\", \"copy-that-mcp\"]."); return; }
+  if (!targets.length) { console.log(`No supported agent found (Claude Code, Codex, Cursor, Gemini CLI, Claude Desktop).\nManual config: command "npx", args ["-y", "${PKG}"].`); return; }
   console.log("Copy That setup will make these changes:\n");
   for (const t of targets) { console.log(`  ${t.label}${t.done ? " — already set up" : ""}`); for (const s of t.steps || []) console.log(`    · ${s}`); }
   const todo = targets.filter((t) => !t.done);

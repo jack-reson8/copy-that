@@ -23,7 +23,7 @@ codex plugin add pro-motion@copy-that
 
 **Cursor, Gemini CLI, Claude Desktop, or everything at once**
 ```bash
-npx copy-that-mcp setup
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz setup
 ```
 Finds the agents on your machine, lists every change, and applies them after you say yes. It also adds the Copy That MCP tools: skill audit, AI-tone check, name check, and the methods for clients that don't load skills. See [mcp/](mcp/).
 

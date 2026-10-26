@@ -87,3 +87,23 @@ Fix that worked: compare frame by frame with the accepted Tutti Apple cut. Each 
 ## 果味 ≠ 平涂浅灰 + 渐变字；暗场材质才不像网页（2026-10-26，港乐 0243）
 Rejected:「颜色还是有点太丑，不要 web 感」「字渐变没必要，用多了油腻，少用才惊艳」。#F5F5F7 平台 + iOS 系统色 + 渐变大字 = 苹果官网截图，不是片子。
 Fix that worked: a full-screen material shader behind everything (React Bits Silk, rewritten as an offscreen WebGL2 layer drawn into the canvas each frame), tinted by the meaning colour (here the tone level), with solid warm-white type. Use a muted pigment palette (indigo, jade, gamboge, vermilion), not iOS system colours. One accent colour only on the numbers that are the point; one gradient in the whole film (the end card). Rive-style damped springs with squash for the hero, and React Bits BlurText for lines.
+
+## 一个真实小场景 + 一个有来源的光 + 自己变过去 = 「特别好」（2026-10-26，日历 → 落叶）
+Jack：「我去 你这些怎么做的 怎么做得这么好」「日历这个特别好」。没被否掉、第一版就过的原因，按分量排：
+1. 用的是作文本那支的方法加代码，子代理开工前先读 `digital-art-short.md`，没有从零开始。所以每个项目接受了什么、否掉了什么，都要写进 skill。
+2. 搭了一个以厘米为单位的真实小场景，光从左边窗户来，墙上有窗框影和树影，空气里有光柱，飞的纸在墙上和地上投影。
+3. 纸变成叶子是同一张网格的参数在变：纤维变叶脉，撕口变叶边，颜色从日期字往外晕。不是换一张贴图。
+4. 内容是真的：日期从七月初一一直撕到霜降，落在发布当天。红字页变枫叶，黑字页变银杏。
+5. 收尾不停：风把叶堆卷向镜头，近处的叶子带运动模糊。
+这些已经写进 `aesthetic-checklist.md` 的「Set, light & finish」，加上 `vfx-techniques.md` 第 7 节。
+
+## 写实光追加一只手 =「假」；人和人造物的题材先定风格（2026-10-26，地铁拉环 → 秋千 v2）
+Jack：「开始的手有点假 转化不太自然 这个的动画不能过 不够风格化」。日历能用写实小场景，是因为纸、墙、叶这些材料写实起来好看。人（手、乘客）放进写实光追里就掉进恐怖谷。吊环变秋千又是靠一团白雾溶过去，这是在换贴图，不是变形。
+Rule: 题材里有人或身体，先选一种风格化语言（动画赛璐璐加手绘光、线稿上色、剪纸），人可以简化成剪影或色块，不写实。两种场景之间的变形用「动作匹配」：同一个摆动的角度、同一个屏幕位置，在一次甩镜或一道光里接过去，不用溶解。风格本身也可以带意思，比如大人的世界是灰线稿，童年的世界是水彩。
+
+## 写在 SKILL 里的门槛 ≠ 门槛：讲解片六轮被否，因为没有东西挡渲染（2026-10-26，港乐 0243 EP.01）
+Rejected six rounds（C→D2→E→E2→夜缎→稿纸）:「一看就是 ai 做的丑东西」「这个风格又是哪里来的」「像那种商务片」. The session had this SKILL.md in context the whole time (re-injected after every compaction), Jack said「看看 promotion 教学」, and it still: let a Sonnet subagent write technique entries headed「未抽帧，待核」from memory (refs_gate only checked the heading, and was never run); picked the final style with「我补」as its only reference; rendered the film with no `shotmap.md`, no `music/events.json`, no BGM; switched the whole style every round; used 6 of ~110 motion-lib functions. Its reasons: it was "an explainer, not a promo", Jack said「直接出成片吧」, and the 总指挥 brief said to hand the render loop to Sonnet.
+Fix that is now in place: `refs_gate.py` rejects unverified entries anywhere in the entry and needs a real `<name>_sheet.jpg` per entry; `film_gate.py` must pass before a film render; `~/.claude/bin/promo-guard.py` (PreToolUse) blocks `render-fast.js` → .mp4 until it does. Rule: an explainer is a film; "直接出成片" means make the missing artifacts fast; reading references is not reading SKILL.md; after two rejections deepen what was accepted instead of switching style.
+
+- 2026-10-26 秋千：配乐要有「炸点」。Summer 开头匀速钢琴，画面的转变没有落点，Jack:「你这个音乐没选好」。改用《人生的旋转木马》里静默后全团炸开的一秒，对在出隧道那一帧。不用流行歌，用国内人人听过的原声配乐。
+- 2026-10-26 秋千 B：宫崎骏水彩段被夸「很好」，前面灰线稿通勤人群被批「太丑」「太机械」。Jack：「如果人你建不好就不要用人了」。做不到好看的人就不出现人，用物件、影子、重量感暗示人群；冷色的现实段也要做到日历片的材质水平，不能因为是「对比的前半段」就做简陋。配乐要贴情绪：怀旧题材用《那个夏天》这类温柔涌起的曲子，管弦乐全团炸开会被听成「胜利的辉煌」。

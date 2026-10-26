@@ -3,7 +3,7 @@
 Copy That as an MCP server. The skills teach the method; these tools do the checking. Works in Claude Code, Codex, Cursor, Gemini CLI, Claude Desktop and any other MCP client.
 
 ```bash
-npx copy-that-mcp setup
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz setup
 ```
 
 Setup finds the agents on your machine, shows every change it will make, and applies them after you say yes. Claude Code and Codex also get the five Copy That skills through their plugin marketplaces. JSON configs are backed up before they are edited.
@@ -28,20 +28,20 @@ Try asking your agent:
 ## Terminal
 
 ```bash
-npx copy-that-mcp audit ~/.claude/skills/my-skill      # exit code 1 when there are blocking issues (CI-friendly)
-npx copy-that-mcp tone draft.md
-npx copy-that-mcp names tutti fizzpic
-npx copy-that-mcp plan ~/code/my-app                   # launch stages done / next
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz audit ~/.claude/skills/my-skill      # exit code 1 when there are blocking issues (CI-friendly)
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz tone draft.md
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz names tutti fizzpic
+npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz plan ~/code/my-app                   # launch stages done / next
 ```
 
 ## Manual config
 
 ```json
-{ "mcpServers": { "copy-that": { "command": "npx", "args": ["-y", "copy-that-mcp"] } } }
+{ "mcpServers": { "copy-that": { "command": "npx", "args": ["-y", "https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz"] } } }
 ```
 
 ## 中文
 
-一行命令把 Copy That 装进你电脑上所有的 AI 编程工具：`npx copy-that-mcp setup`，改动前会全部列出来，你确认后才执行。五个工具：给 skill 体检打分、查中英文 AI 味、起名查域名和 App Store 重名、`launch_plan` 把 pro-launch 和 pro-motion 合成一条从定位到发布片、官网、上线的流程（给项目文件夹就告诉你做到哪一步、下一步做什么）、把五套方法（发布片、产品 0→1、组图、人话、写 skill）提供给 Cursor、Gemini 这些不支持 skill 的客户端。
+一行命令把 Copy That 装进你电脑上所有的 AI 编程工具：`npx -y https://github.com/jack-reson8/copy-that/releases/latest/download/copy-that-mcp.tgz setup`，改动前会全部列出来，你确认后才执行。五个工具：给 skill 体检打分、查中英文 AI 味、起名查域名和 App Store 重名、`launch_plan` 把 pro-launch 和 pro-motion 合成一条从定位到发布片、官网、上线的流程（给项目文件夹就告诉你做到哪一步、下一步做什么）、把五套方法（发布片、产品 0→1、组图、人话、写 skill）提供给 Cursor、Gemini 这些不支持 skill 的客户端。
 
 Nothing is sent anywhere except the lookups you ask for (GitHub for audits of GitHub links, RDAP/DNS/App Store/npm for name checks). MIT licensed.

@@ -21,3 +21,26 @@ Read at step 1 (campaign brain) and at web-craft W0 step 3, before any style fra
 
 ## Where the process lives in the files
 `docs/idea-trail.md` (moves 1–8 + kill list) → `technique-sheets.md` (refs decoded) → `style-frames.md` (Register, frames, Core gap, Picked) → code. `web_gate.py --ship` checks the last three; this file is checked by reading `idea-trail.md` at the review.
+
+## Association chain: how an object becomes a feeling (accepted 2026-10-26, 作文本 / 日历 / 正在输入)
+Use this for every art short, and for brand films whose protagonist is an object. It is the way of thinking behind the accepted ideas. Write the chain as a table in `docs/idea-trail.md` before any picture; a row with an empty cell is not an idea.
+
+| Step | Question | 作文本 | 日历 | 地铁拉环（Jack 选） |
+|---|---|---|---|---|
+| 0 Statement | What line would the viewer say out loud after watching? A pretty match with no statement fails (Jack 2026-10-26 on TV static → snow:「没有主旨…我想有点表达」). | 梦想被撕走了 | 再撕几页就冬天了 | 小时候真好啊 / 如果能回到小时候 |
+| 1 Feeling | What does everyone feel and rarely say? | the dream I wrote as a kid | the year slipped by | adult life is being shaken around |
+| 2 Holder | Which everyday object everyone has touched holds that feeling? | composition book | tear-off calendar | the swaying subway hand strap |
+| 3 Own verb / material | What does that object physically do, or what is it made of? | grid cells, torn page | a page is torn off and drops | it swings with the train |
+| 4 Bridge | What thing in the world shares that verb or shape **and** carries the feeling? | birds lift off (cells → wings) | leaves fall (paper → leaf) | the childhood swing (strap → swing seat) |
+| 5 Double-match test | Say "X 和 Y 都会 <动词>，而且都意味着 <情绪>". Both halves must be true. | both lift off; both mean leaving | both fall; both mean time passing | both swing; one is pushed by the commute, one by a parent |
+| 6 Data and truth | Which real data of the object picks the variants, and which true detail ends it? | the characters 梦想 lead the flock | red page → maple, black page → ginkgo; ends on the real date 霜降 | the real morning-rush crowd and the station name |
+| 7 Now | Why does this land this week? | back-to-school memory | 霜降 is the release day | any workday morning |
+
+Rules that came from the rejections:
+- **A double match is necessary but not sufficient**: it needs a statement (step 0). Also rejected: tangled earphone wire → song waveform; the typing dots → rain looked worse than its idea, so a match also has to promise a strong picture.
+- **Shape match only means it is decoration.** It looks alike but means nothing ("看不出含义").
+- **Meaning only means the meaning is told, not shown.** The meaning is carried by text or voice ("还是普").
+- **No holder object means the piece is abstract.** Squares and grids read as "modern art".
+- **Generate wide, then filter.** Write ≥6 rows on different life axes (school, work, family, city, phone, seasons) before judging any of them, and pick by the double-match test.
+- **Vary the transformation across a series.** Use a different verb each time: scatter, fall, condense, split, unravel, drain. That way the account never repeats itself; birds and then more birds would.
+- **For brand films, the holder is the product's own object.** A shutter, a share code, a stamp. Steps 4–5 find what it becomes; this is move 2 (the product's verb) pushed one step further, into a feeling.

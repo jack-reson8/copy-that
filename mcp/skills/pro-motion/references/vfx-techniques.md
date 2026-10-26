@@ -93,3 +93,11 @@ Pick at least one for any launch or brand film. Write it into the shot map as a 
 3. **The viewer thinks it's broken:** glitch, freeze or a buffering spinner mid-film. Within 2 s the product fixes it, or the glitch turns out to be the doorway to the next scene. Keep one element stable so the error reads as intentional.
 4. **Fourth wall:** the protagonist sees the captions and pushes them, stands on them or counts the beat in.
 5. **Chain reaction:** every event is the physical result of the one before. Lock every link to the beat grid and land the last link on the biggest hit, which is also the logo. References: OK Go "This Too Shall Pass" [qybUFnY7Y8w](https://www.youtube.com/watch?v=qybUFnY7Y8w), Gondry "Star Guitar".
+
+## 7 · Material morph (one object becomes another by its own parameters) — accepted 2026-10-26
+The strongest transition in the art shorts and usable in any MG film or web hero. Recipe from `p5-mood-art/samples/calendar/index.html`:
+- One deformable mesh (grid of UVs) for both states; a vertex shader bends it (`curl`, `twist`, `tear`), and the **same bend function exists in JS** so shadows and hit tests agree with the picture.
+- A blend `m: 0→1` drives every property at once: shape mask (rectangle → leaf outline, the torn edge's noise reused as the leaf margin), fibre field angle (parallel → radial = veins), colour (spreads outward from the most meaningful mark, e.g. the printed date), translucency and rim light.
+- The trigger is physical (torn off, falls, hits a gust), and `m` follows the object's own clock, so many objects morph in a wave rather than in sync.
+- Variants of the end state come from the object's data (red page → maple, black → ginkgo).
+- Same idea elsewhere: typing dots → refractive drops (rain short), paper cells → birds (作文本), a product icon → its feature, a UI card → a physical object.

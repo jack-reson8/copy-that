@@ -10,7 +10,7 @@ Patterns already found (✓ measured on 4 creators and 164 posts, 2026-10):
 - Picture: quiet for the first 2–3 s. The music enters at the moment of transformation.
 - Topic: a memory everyone shares (school notebook, office badge, phone in bed). That is what makes people save and share. Pure abstraction gets likes but no shares.
 
-## B · The idea: one everyday symbol transforms itself
+## B · The idea: one everyday symbol transforms itself (fill the association-chain table in `creative-process.md` first)
 Gate: write the idea as **"<a symbol everyone has touched> → by its own material, becomes → <what it secretly means>"**. Examples:
 - composition-book lines → torn page cells become a flock of birds (梦想 flies away);
 - a fingerprint clock-in → contour mountains;
@@ -22,6 +22,8 @@ Rejected, with the user's words, so don't repeat them:
 - **Meaning hidden in voice or text.** A meaning carried only by a voice clip or by text was rejected: "看不出含义", "还是普". The meaning must be readable from the picture alone.
 - **Flat Canvas-2D primitives** for clouds, willow, silk or flowers: "20 年前动画的感觉".
 - **Clip-art endings.** An ending that "grows" something (line-drawn clouds, sprouts) was called ugly. Motion beats a static image: "动态永远比静态好看". End on many things scattering or flying apart, not on a picture that sits still.
+
+Gate (2026-10-26, Jack:「你忘记找配乐了」): pick the music **with the idea, before the direction frame**. Cut 12 s from each candidate creator video and identify it with AudD. Write the chosen track, its energy envelope (silent lead-in, where it swells) and the source offset into `docs/idea-trail.md`. The direction frame's timing then follows the swell, so you never retime the frame to fit the music later. A frame shown without music is half a deliverable.
 
 ## C · Look: material first, motion always
 - **Natural material is a full-screen fragment shader, never 2D shapes.** Use paper fibre, domain-warped fbm sky, and backlit rims; pass the camera into the shader as a uniform so the parallax is real. Acceptance test: crop to half the screen and there is still texture. See also `lessons.md` 2026-10-26.
@@ -37,6 +39,10 @@ Rejected, with the user's words, so don't repeat them:
   - Identify the track first: cut a 12 s mp3 and `curl -F file=@clip.mp3 https://api.audd.io/`. ShazamKit CLI fails with error 201.
   - Credit the track in the post, and attach the same track from the platform's music library when publishing.
   - Get the best source. xhs default downloads are HE-AAC 56k. Take the highest-`avgBitrate` stream from `__INITIAL_STATE__…video.media.stream` (h265, 128k audio) and download it with a Referer header.
+- **Once identified, use the whole original, not the creator's clip** (2026-10-26, Jack:「下次音乐也未必要一定用一样的片段」). Use the creator's video as the identification route only. Get the full track, e.g. the official upload with the skill's pinned yt-dlp, audio only. Then pick the section that fits both the emotion and the rhythm.
+  - Picture-first: list the picture's key moments (first tear, the transformation, the gust, the last page), then run `python3 scripts/music_fit.py full.wav --dur <film> --hits t1,t2:2,… --quiet 0-1 --swell <t>`. Cut the track at the best offset. The key moments must land on onsets within about ±40 ms; that matters more than which bar the clip starts on.
+  - **Pick a track with one explosion point** (2026-10-26, Jack:「要选那种有一个突变点或者有个情绪点的音乐，这样你画面的变化才能和它音乐变化结合上」「不要选流行歌…选一些有大众认知度的」). An even groove (Summer's opening) gives the transformation nothing to land on. Prefer well-known instrumental soundtracks in China (久石让 / 宫崎骏 suites, famous film scores), not pop songs. Find the point by script: the largest jump of 3 s mean level after vs before (a near-silent fermata then a tutti is best: 《人生的旋转木马》 361 s version, 331.70 s, −56 → −24 dB). Put it exactly on the transformation frame: offset = point − t_transform. Resample every source to the mix rate first; a 44.1k file cut with 48k indices drifts by 9 %.
+  - Music-first (when the track is chosen before the idea): run `music_events.py` instead and time the picture to the events.
 - **Mastered commercial track = 1:1.** Peaks are already at 0 dBFS, so add no gain and no extra limiting. Fit the SFX around the music. Pushing it was heard as "smaller and worse than the original".
 - **SFX are real recordings, synced per event.** Sources:
   - Final Cut Pro library `/Library/Audio/Apple Loops/Apple/Final Cut Pro Sound Effects/`: pencil, room tone, tear, wings, low hit, whoosh, airy. Best first stop.
@@ -58,7 +64,8 @@ Rejected, with the user's words, so don't repeat them:
   - Body: hashtags only (topic tags + #数字艺术 #vibecoding #aha这也是艺术 …) plus the BGM credit.
   - Cover: the widest, most dynamic frame (hero agents near the camera), **no text on the cover**.
 
-## Worked example
+## Worked examples
+- `~/Desktop/vibecoding/p5-mood-art/samples/calendar/index.html` (direction frame Jack called 「特别好」): real cm-scale set, window light, page mesh morphing into leaves, true lunar dates ending on 霜降. Read it before any new art short; it is the current quality bar.
 `~/Desktop/vibecoding/p5-mood-art/samples/zuowen/` (published 2026-10-26 as 「老师说，梦想要写在纸上」):
 - `index.html`: paper and sky shaders, tear, cells → birds, pulled lines, near birds, camera;
 - `mix.py`: creator BGM 1:1, Final Cut SFX per character, stems;
