@@ -32,6 +32,10 @@
 - 发布片参考已回：refs/technique-sheets.md + refs/picks/ 6 张；下一步按 6 个手法用真实素材重做风格帧。
 
 ## 早上给 Jack
+- [ ] copy-that-mcp 发布：npm 账号登录后 `cd ~/code/copy-that/mcp && npm publish`，再推送 copy-that（README 已写 npx 命令，发布前别推）
+- [x] 发布片 v3.1 Jack 通过（"完美"）。中文 out/copy-that-onair-v3.1.mp4，英文 out/copy-that-onair-v3.1-en.mp4（film31.html?lang=en）。对比页 https://claude.ai/code/artifact/5d2bee2f-5476-4c5e-a08e-82726efcad69 。剩：16:9、1:1。
+- [ ] pr-watch 要发 X 帖：需你在内置浏览器登录 X；按你的规矩对外发帖由你本人点发送，它只备稿
+- [ ] 音乐插件：engine2 已接进插件（4d1467f，材质抽屉，pluginval 5 级过）试听 https://claude.ai/code/artifact/5c318889-1e82-47b5-9df7-c500b1eae87f ；逐键实测对耳页 https://claude.ai/code/artifact/6ef3e613-1519-4e14-808a-993c5e1fed12 ；自动调参第 1 轮 https://claude.ai/code/artifact/c4068021-fdfe-4fba-867c-ce293d29f835
 - [ ] 新 skill 定名（推荐 Over & Out）：https://claude.ai/code/artifact/5a5eea84-ea19-4e4a-b286-c0a16dc2b73a
 - [x] 发布片风格：Jack 选 B+C 融合、要求不照搬。已出 On Air 融合版 https://claude.ai/code/artifact/5980a206-f10d-43fc-a04b-96f83eae235e （源 ~/code/.work/copy-that-film/frames3/），等 Jack 看；旧四选一：https://claude.ai/code/artifact/31362578-831f-4d13-9402-66a161bcd4e5 ；源文件 ~/code/.work/copy-that-film/frames2/
 - [ ] glama.ai 登记 toolkb-mcp（punkpeye PR 要求）
@@ -86,3 +90,12 @@
 - 事故：清理卡住的 headless Chrome 时误用 pkill "Google Chrome"，可能关掉了 Jack 的 Chrome 窗口（可 Cmd+Shift+T 恢复标签）。
 - GEO：copy-that 加了 llms.txt 和 FAQ（已推送）。
 - 发布片 v3：out/copy-that-onair-v3.mp4（film/film3.html）。同一条链做四遍、越来越快：brief 卡 → COPY THAT. 盖章 → 从章里裂开出真实成品（tutti.pics、组图、人话前后、体检）；铜管段每下一个"你要的东西"+盖章；结尾字标 + "说一句，它就去做。"。pro-motion 58c8140 合并了音频分析方法（music_events.py + audio-reference-analyzer）。
+- 发帖交接（10-25）：对外发帖由 Jack 本人做，我不登录不点发送。内置浏览器里 X 未登录（停在登录页），已列入"早上给 Jack"。最终稿：~/code/.work/launch/PLAYBOOK.md（顺序和各条文案）、launch-posts.md（renhua 前后对比 + 发布日安排）；图：~/code/.work/launch/posts/en/ 和 posts/zh/（竖版 1080×1350）。
+
+## 2026-10-26 copy-that-mcp（Jack："可以啊 我们搞个 mcp"）
+- 代码在 copy-that/mcp/，本地 commit，未推送、未发布 npm。包名 copy-that-mcp（copy-that 会被 npm 判定与已有的 copythat 太像）。
+- 4 个工具：audit_skill（skill_audit.py 的 Node 版，分数与 Python 版一致，支持 GitHub 链接）、ai_tone_check（人话 8 条 + 英文 AI 腔）、name_check（RDAP + DNS 兜底，.io/.co 没有 RDAP 会误报空闲，已修；App Store/GitHub/npm 重名）、skill_method（5 套方法，另有 prompts 和 copythat:// 资源）。
+- setup：npx copy-that-mcp setup，列改动→确认→Claude Code/Codex 走官方 CLI 装插件+MCP，Cursor/Gemini/Claude Desktop 改 JSON（先备份）。
+- 验证：npm test（SDK 客户端走 stdio 全部工具）；Codex 真跑调用 ai_tone_check 成功；npm pack 装包后 --version、setup --dry-run 正常。Claude Code CLI 未登录，没在 Claude Code 里真跑。
+- 待 Jack：npm 发布（需 Jack 的 npm 账号登录）+ 推送 copy-that。
+- 后续：pro-launch 的 domain_check.py 有同样的 .io/.co 误报，要补 DNS 兜底；v0.2 考虑把风格库整理成可公开的参考库工具。

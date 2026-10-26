@@ -1,13 +1,13 @@
-# PR 状态（2026-10-25 自动生成）
+# PR 状态（2026-10-26 自动生成）
 
 每天 9:30 由 copy-that-daily-growth 刷新；手动：`python3 ~/code/.work/growth/pr_watch.py`。邮件通知已关，看这里。
 
-YOU 1 · ACTION 0 · WAIT 34 · MERGED 21 · CLOSED 3
+YOU 1 · ACTION 0 · WAIT 33 · MERGED 22 · CLOSED 3
 
 ## YOU（1）
 - [punkpeye/awesome-mcp-servers#16953](https://github.com/punkpeye/awesome-mcp-servers/pull/16953) Add toolkb-mcp 🤖🤖🤖 — List the server on glama.ai (account owner) and add the Glama badge to the PR line.
 
-## WAIT（34）
+## WAIT（33）
 - [BehiSecc/awesome-claude-skills#1004](https://github.com/BehiSecc/awesome-claude-skills/pull/1004) Add skill-skill to Utility & Automation
 - [BehiSecc/awesome-claude-skills#1008](https://github.com/BehiSecc/awesome-claude-skills/pull/1008) Add renhua, post and pro-launch skills
 - [BehiSecc/awesome-claude-skills#999](https://github.com/BehiSecc/awesome-claude-skills/pull/999) Add pro-motion to Media & Content
@@ -18,7 +18,6 @@ YOU 1 · ACTION 0 · WAIT 34 · MERGED 21 · CLOSED 3
 - [GetBindu/awesome-claude-code-and-skills#306](https://github.com/GetBindu/awesome-claude-code-and-skills/pull/306) Add renhua, post, pro-motion and skill-skill
 - [MobinX/awesome-mcp-list#927](https://github.com/MobinX/awesome-mcp-list/pull/927) Add jack-reson8/toolkb-mcp to Search
 - [O0000-code/paper-search-pro#4](https://github.com/O0000-code/paper-search-pro/pull/4) Fix SKILL.md description length (over 1024-char spec limit)
-- [TensorBlock/awesome-mcp-servers#4473](https://github.com/TensorBlock/awesome-mcp-servers/pull/4473) Add toolkb-mcp to Multimedia Processing
 - [anthropics/skills#2050](https://github.com/anthropics/skills/pull/2050) claude-api: bring description under the 1024-character spec limit
 - [ccplugins/awesome-claude-code-plugins#775](https://github.com/ccplugins/awesome-claude-code-plugins/pull/775) Add 5 jack-reson8 marketplaces to External Marketplaces (pro-motion, skill-skill, renhua, post, pro-launch)
 - [collabnix/awesome-mcp-lists#261](https://github.com/collabnix/awesome-mcp-lists/pull/261) Add toolkb-mcp to Web & Content
@@ -43,11 +42,12 @@ YOU 1 · ACTION 0 · WAIT 34 · MERGED 21 · CLOSED 3
 - [vanna-ai/Awesome-Vibe-Coding-CLI#25](https://github.com/vanna-ai/Awesome-Vibe-Coding-CLI/pull/25) Add pro-launch to Other Tools
 - [yzfly/Awesome-MCP-ZH#833](https://github.com/yzfly/Awesome-MCP-ZH/pull/833) 新增 toolkb-mcp 到 🌐 浏览器自动化与网页交互
 
-## MERGED（21）
+## MERGED（22）
 - [0xWelt/Awesome-Vibe-Coding#387](https://github.com/0xWelt/Awesome-Vibe-Coding/pull/387) Add Copy That and toolkb-mcp
 - [AIAnytime/Awesome-MCP-Servers#310](https://github.com/AIAnytime/Awesome-MCP-Servers/pull/310) Add toolkb-mcp (media)
 - [AlexMili/Awesome-MCP#325](https://github.com/AlexMili/Awesome-MCP/pull/325) Add toolkb-mcp to Web, Search & Browser
 - [Chat2AnyLLM/awesome-repo-configs#281](https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/281) Add jack-reson8 marketplaces, skills and toolkb-mcp
+- [TensorBlock/awesome-mcp-servers#4473](https://github.com/TensorBlock/awesome-mcp-servers/pull/4473) Add toolkb-mcp to Multimedia Processing
 - [acvnace/awesome-vibe-coding-resources#215](https://github.com/acvnace/awesome-vibe-coding-resources/pull/215) Add Copy That and toolkb-mcp to Plugins and Extensions
 - [davepoon/buildwithclaude#536](https://github.com/davepoon/buildwithclaude/pull/536) Add renhua plugin (1.0.0, pinned)
 - [davepoon/buildwithclaude#538](https://github.com/davepoon/buildwithclaude/pull/538) Add pro-motion plugin (1.2.0, pinned)
